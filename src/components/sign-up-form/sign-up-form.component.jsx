@@ -41,8 +41,9 @@ const SignUpForm = () => {
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
         alert("Email already in use");
+      } else {
+        console.error("User creation encountered an error ", error);
       }
-      console.error("User creation encountered an error ", error);
     }
   };
 
